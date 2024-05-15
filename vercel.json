@@ -1,21 +1,13 @@
 {
+    "name": "SWE-project",
     "version": 2,
     "builds": [
-      {
-        "src": "src/**/*",
-        "use": "@vercel/static-build"
-      }
+      { "src": "public/**", "use": "@vercel/static" },
+      { "src": "api/**", "use": "@vercel/node" }
     ],
     "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/index.html"
-      }
-    ],
-    "build": {
-      "env": {
-        "NODE_ENV": "production"
-      }
-    }
+      { "src": "/api/(.*)", "dest": "/api/$1" },
+      { "src": "/(.*)", "dest": "/public/$1" }
+    ]
   }
   

@@ -14,15 +14,6 @@
         },
         "@schematics/angular:pipe": {
           "standalone": false
-        },
-        "SWE-project": {
-          "architect": {
-            "build": {
-              "options": {
-                "outputPath": "dist/SWE-project"
-              }
-            }
-          }
         }
       },
       "root": "",
